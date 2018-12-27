@@ -21,12 +21,22 @@
 
         Country:
         <form:select path="country">
-            <from:option value="Japan" label="Japan"/>
-            <from:option value="Dominican Republic" label="Dominican Republic"/>
-            <from:option value="France" label="France"/>
-            <from:option value="India" label="India"/>
-
+          <form:options items="${student.countryOptions}"/>
         </form:select>
+        <br><br>
+
+        Favorite Language:
+
+        Java <from:radiobutton path="favoriteLanguage" value="Java"/>
+        C# <from:radiobutton path="favoriteLanguage" value="C#"/>
+        PHP <from:radiobutton path="favoriteLanguage" value="PHP"/>
+        Ruby <from:radiobutton path="favoriteLanguage" value="Ruby"/>
+        <br><br>
+        Operating System:
+        Linux <from:checkbox path="operatingSystems" value="Linux"/>
+        Mac OS <from:checkbox path="operatingSystems" value="Mac OS"/>
+        MS Windows <from:checkbox path="operatingSystems" value="MS Windows"/>
+
         <br><br>
         <input type="submit" value="Submit">
     </from:form>
