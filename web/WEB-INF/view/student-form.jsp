@@ -5,7 +5,7 @@
   Time: 10:36 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
+
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
     <title>Student Registration</title>
 </head>
 <body>
-    <from:form action="processForm" modelAttribute="student">
+    <form:form action="processForm" modelAttribute="student">
         First name: <form:input path="firstName"/>
         <br><br>
         Last name: <form:input path="lastName" />
@@ -27,18 +27,18 @@
 
         Favorite Language:
 
-        Java <from:radiobutton path="favoriteLanguage" value="Java"/>
-        C# <from:radiobutton path="favoriteLanguage" value="C#"/>
-        PHP <from:radiobutton path="favoriteLanguage" value="PHP"/>
-        Ruby <from:radiobutton path="favoriteLanguage" value="Ruby"/>
+        Java <form:radiobutton path="favoriteLanguage" value="Java"/>
+        C# <form:radiobutton path="favoriteLanguage" value="C#"/>
+        PHP <form:radiobutton path="favoriteLanguage" value="PHP"/>
+        Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>
         <br><br>
         Operating System:
-        Linux <from:checkbox path="operatingSystems" value="Linux"/>
-        Mac OS <from:checkbox path="operatingSystems" value="Mac OS"/>
-        MS Windows <from:checkbox path="operatingSystems" value="MS Windows"/>
+        Linux <form:checkbox path="operatingSystems" value="Linux"/>
+        Mac OS <form:checkbox path="operatingSystems" value="Mac OS"/>
+        MS Windows <form:checkbox path="operatingSystems" value="MS Windows"/>
 
         <br><br>
         <input type="submit" value="Submit">
-    </from:form>
+    </form:form>
 </body>
 </html>
